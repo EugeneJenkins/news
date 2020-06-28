@@ -14,6 +14,9 @@
 <header>
     <div class="container">
         <div class="header__title"><a href="/">Fast News</a></div>
+        @auth
+            <div class="become_an_Author"><a href="/author">Стать автором</a></div>
+        @endauth
 
 
         <form action="" method="POST" class="searchform">
@@ -37,6 +40,17 @@
                 <div class="nav__sign">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <div class="test">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
                     @else
                         <a class="sign__link" href="/login">Войти</a>
 
