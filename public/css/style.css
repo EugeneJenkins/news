@@ -157,6 +157,7 @@ header {
 }
 
 .nav__link,
+.info__link,
 .sign__link {
     /* display: inline-block; */
     vertical-align: top;
@@ -170,17 +171,20 @@ header {
 }
 
 .nav__link:first-child,
-.sign__link:first-child {
+.sign__link:first-child
+.info__link:first-child{
     margin-left: 0;
 }
 
 .nav__link:last-child,
-.sign__link:last-child {
+.sign__link:last-child,
+.info__link:last-child {
     margin-right: 0;
 }
 
 .nav__link:after,
-.sign__link:after {
+.sign__link:after,
+.info__link:after {
     content: "";
     display: block;
     width: 100%;
@@ -198,8 +202,13 @@ header {
 }
 
 .nav__link:hover:after,
-.sign__link:hover:after {
+.sign__link:hover:after,
+.info__link:hover:after {
     opacity: 1;
+}
+/* Навигация настроек */
+.info {
+    margin-top: 50px;
 }
 
 /* Вход и регистрация */
@@ -390,7 +399,7 @@ aside {
     height: 300px;
     margin: 50px auto 50px auto;
 }
-.reg__input{
+.reg__input {
     position: absolute;
     left: 30%;
 }
@@ -453,13 +462,13 @@ aside {
     transition: 0.3s all linear;
 }
 /* верстка страники авторства */
-.autorship{
+.autorship {
     margin-top: 20px;
 }
-.autorship ul{
+.autorship ul {
     list-style: inside;
 }
-.authorship__title{
+.authorship__title {
     text-align: center;
 }
 /* футер */

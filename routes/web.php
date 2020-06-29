@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','IndexController@show');
-
 Route::get('/author','AuthorController@form');
-
 Route::get('/author/add','AuthorController@addAuthor');
+Route::post('/user/profile','SettingsController@profile')->name('profile');
+Route::get('/user/account','SettingsController@account');
 
 Auth::routes();
 
