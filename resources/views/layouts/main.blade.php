@@ -31,8 +31,8 @@
 
         <div class="subtitle__navigation">
             <div class="nav">
-                <a class="nav__link" href="#">Новости</a>
-                <a class="nav__link" href="#">Статьи</a>
+                <a class="nav__link" href="/news">Новости</a>
+                <a class="nav__link" href="/articles">Статьи</a>
                 <a class="nav__link" href="#">Авторы</a>
             </div>
 

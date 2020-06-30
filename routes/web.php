@@ -19,6 +19,7 @@ Route::get('/author/add','AuthorController@addAuthor');
 Route::get('/user/profile','SettingsController@profile')->name('profile');
 Route::get('/user/account','SettingsController@account');
 Route::get('/post/add','PostController@postAdd');
-
+Route::get('/news','IndexController@news');
+Route::get('/articles','IndexController@article');
 
 Auth::routes();

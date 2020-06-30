@@ -15,7 +15,6 @@ class PostController extends Controller
         $this->middleware('author');
     }
 
-
     public function postAdd(Request $request){
         $post= $request->input('post');
         $id=Auth::user()->id;
