@@ -39,14 +39,14 @@
             <div class="subtitle__sign">
                 <div class="nav__sign">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="/user/profile">Home</a>
                         <div class="test">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
+                            <a href="/post/add">пост</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
@@ -75,10 +75,18 @@
         <div class="footer-col"><span>Мой блог © 2016</span></div>
         <div class="footer-col">
             <div class="social-bar-wrap">
-                <a title="Facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a title="Twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a title="Pinterest" href="" target="_blank"><i class="fa fa-pinterest"></i></a>
-                <a title="Instagram" href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a title="Facebook" href="" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a title="Twitter" href="" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a title="Pinterest" href="" target="_blank"
+                ><i class="fab fa-pinterest"></i>
+                </a>
+                <a title="Instagram" href="" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
         <div class="footer-col">

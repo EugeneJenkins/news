@@ -1,8 +1,8 @@
 @extends('layouts.setmain')
 @section('main')
         <div class="info__profile">
-                <form method="post" action="{{ route('profile') }}">
-                    @csrf
+                <form method="get" action="{{ route('profile') }}">
+{{--                    @csrf--}}
                 <input type="text" name="name" placeholder="">
                 <select name="gender" id="">
                     <option value="None">Другой</option>

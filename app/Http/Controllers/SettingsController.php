@@ -13,13 +13,27 @@ class SettingsController extends Controller
     private $month=["Январь","Февраль","Март","Апрель","Май","Июнь",
         "Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
 
-
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function account(){
+    public function account(Request $request){
+        $id=Auth::user()->id;
+
+        if ($request->input('email')!==null){
+            $email=$request->input('email');
+            DB::table('users')->where('id',$id)->update([
+                'email'=>$email
+            ]);
+        }
+
+        if ($request->input('password')!==null){
+            $password=$request->input('password');
+            DB::table('users')->where('id',$id)->update([
+                'password'
+            ]);
+        }
         return view('settings.account');
     }
 
@@ -29,14 +43,9 @@ class SettingsController extends Controller
 
         $id = Auth::user()->id; #Получение id Пользователя
         $time=date('Y-m-d H:i:s');
-        echo $time;
-
 
         if ($request->input('name')!==null){
-
             $name= $request->input('name');
-//            echo $id;
-//            var_dump($name);
             DB::table('users')->where('id',$id)->update([
                 'name'=>$name,
                 'updated_at'=>$time
