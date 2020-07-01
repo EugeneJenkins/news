@@ -1,53 +1,57 @@
-@extends('layouts.main')
-@section('title')
-    Регистрация
-@endsection
-@section('main')
-<div class="container">
-    <div class="signupform">
-        <form method="POST" action="{{ route('register') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create account</title>
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}?22">
+
+</head>
+<body>
+
+<div class="main">
+    <div class="container">
+        <form method="POST" action="{{ route('register') }}" class="appointment-form" id="appointment-form">
             @csrf
-            <div class="formtitle">
-                <p><b>Регистрация</b></p>
+            <h2><b>Create account</b></h2>
+            <div class="form-group-1">
+                <input id="name" type="text" placeholder="Name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
+                <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
+                <input id="password" placeholder="Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
+                <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             </div>
-            <div class="reg__input">
-                <div class="reg__nick">
-                    <input id="name" type="text" placeholder="Никнейм" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                    @error('name')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
-                </div>
+            <div class="form-submit">
+                <button type="submit" class="submit">
+                    {{ __('Register') }}
+                </button>
+            </div>
 
-                <div class="reg__email">
-                    <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
-                </div>
-                <div class="reg__pass">
-                    <input id="password" placeholder="Пароль" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
-                </div>
-                <div class="reg__pass">
-                    <input id="password-confirm" placeholder="Пароль ещё раз" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                </div>
-                <div class="form__submit">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Register') }}
-                    </button>
-                </div>
+            <div class="sigup">
+                <span>Already have an account? </span><a href="/login"> Log in</a>
+            </div>
+            <div class="home">
+                <a href="/">Home</a>
             </div>
         </form>
     </div>
 </div>
-@endsection
+</body>
+</html>

@@ -72,7 +72,7 @@
 
 <footer>
     <div class="container">
-        <div class="footer-col"><span>Мой блог © 2016</span></div>
+        <div class="footer-col"><span>Fast News © 2020</span></div>
         <div class="footer-col">
             <div class="social-bar-wrap">
                 <a title="Facebook" href="" target="_blank">

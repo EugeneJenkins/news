@@ -7,8 +7,8 @@
 @section('main')
     <div class="post__continer">
         <div class="container">
-            @foreach($news as $news)
             <div class="posts-list">
+                @foreach($news as $news)
                 <article id="post-1" class="post">
 
                     <div class="post_list_info">
@@ -36,8 +36,9 @@
                         </div>
                     </div>
                 </article>
+                @endforeach
             </div> <!-- конец div class="posts-list"-->
-            @endforeach
+
 
             <aside>
 

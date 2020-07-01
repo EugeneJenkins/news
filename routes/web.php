@@ -22,4 +22,7 @@ Route::get('/post/add','PostController@postAdd');
 Route::get('/news','IndexController@news');
 Route::get('/articles','IndexController@article');
 
+Route::get('/test',function (){
+    return view('auth.signup');
+});
 Auth::routes();
