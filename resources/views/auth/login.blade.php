@@ -33,7 +33,7 @@
             </div>
             <div class="form-submit">
                 <button type="submit" class="submit">
-                    {{ __('Register') }}
+                    {{ __('Login') }}
                 </button>
             </div>
 

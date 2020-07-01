@@ -164,15 +164,14 @@ header {
     margin: 0 15px;
     position: relative;
 
-    color: #000000;
+    color: #353535;
     text-decoration: none;
 
     transition: color 0.1s linear;
 }
 
 .nav__link:first-child,
-.sign__link:first-child
-.info__link:first-child{
+.sign__link:first-child .info__link:first-child {
     margin-left: 0;
 }
 
@@ -208,7 +207,114 @@ header {
 }
 /* Навигация настроек */
 .info {
-    margin-top: 50px;
+    margin: 50px 0;
+    width: 160px;
+}
+.info_title {
+    margin-bottom: 50px;
+}
+.info__link {
+    margin-left: 0px;
+    color: #4d80aa;
+    font-size: 17px;
+}
+.profile__name {
+    position: relative;
+    width: 300px;
+}
+.profile__name input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: "Roboto", sans-serif;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #4a90e2;
+    transition: all 0.2s ease;
+}
+
+.profile__name label {
+    position: absolute;
+    left: 13px;
+    color: #9d959d;
+    font-size: 18px;
+    font-weight: 300;
+    transform: translateY(-35px);
+    transition: all 0.2s ease;
+}
+.profile__name input:focus {
+    outline: 0;
+    border-color: #f77a52;
+}
+.profile__name input:focus + label,
+.profile__name input:valid + label {
+    transform: translateY(-60px);
+    margin-left: -14px;
+    font-size: 14px;
+    font-weight: 400;
+    outline: 0;
+    border-color: #f77a52;
+    color: #f77a52;
+}
+.select__gender {
+    margin: 40px 0;
+}
+
+.select__gender p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.select__gender select {
+    padding: 5px 50px;
+    border-radius: 5px;
+    display: block;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #4a90e2;
+}
+
+.select__birthday p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.select__birthday select {
+    padding: 5px 50px;
+    border-radius: 5px;
+    display: inline;
+    background: none;
+    border-width: 0;
+    border-bottom: 2px solid #4a90e2;
+}
+
+.profile__form__submit {
+    margin-top: 30px;
+    position: relative;
+    max-width: 300px;
+}
+.profile__submit {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 200px;
+    left: 41%;
+    border-radius: 5px;
+    border-color: #4a90e2;
+    background: white;
+}
+.info__account{
+    margin-bottom: 50px;
+}
+.info hr {
+    border: 0;
+    width: 100%;
+    height: 1px;
+    border-width: 0;
+    background: #989da1;
+    margin-top: 5px;
 }
 
 /* Вход и регистрация */
@@ -254,13 +360,9 @@ header {
 }
 /* блок с кнопкой "продолжить чтение" и кнопками социальных сетей */
 .post_list_info {
-    /* display: inline; */
     height: 40px;
-    /* margin: 20px 0; */
 }
-/* .post-image{
 
-} */
 .post_author_img {
     float: left;
     width: 24px;
@@ -391,44 +493,6 @@ aside {
 }
 /* форма подписки */
 
-/* Форма регистрации */
-.signupform {
-    position: relative;
-    text-align: center;
-    width: 550px;
-    height: 300px;
-    margin: 50px auto 50px auto;
-}
-.reg__input {
-    position: absolute;
-    left: 30%;
-}
-.formtitle {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 40px;
-    background-color: #4808dfa1;
-    /* background-color: #ff0000d0; */
-    /* background-color: #FF8000; */
-
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.signupform p {
-    text-align: center;
-    color: #ffffffaf;
-    font-size: 20px;
-    font-family: "Russo One", sans-serif;
-    text-transform: uppercase;
-    padding-top: 10px;
-}
-.signupform form input {
-    padding: 10px 25px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
 /* Иконки регистрации */
 .reg__pass,
 .reg__nick,
@@ -473,6 +537,7 @@ aside {
 }
 /* футер */
 footer {
+    margin-top: 50px;
     padding: 30px 0;
     background: #3c3d41;
     color: white;
