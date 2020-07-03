@@ -17,7 +17,12 @@ class PostController extends Controller
 
     public function postAdd(Request $request){
         $post= $request->input('post');
-        $id=Auth::user()->id;
+        $id_user=Auth::user()->id;
+
+        $id=DB::table('authors')->where([
+            'id_users'=>$id_user
+        ])->get('id_authors');
+        $id=$id[0]->id_authors;
 
       if ($request->input('title')!==null
           & $request->input('category')!==null
@@ -39,6 +44,7 @@ class PostController extends Controller
               'date'=>date('Y-m-d H:i:s')
           ]);
       }
+
 
       return view('sandbox');
   }

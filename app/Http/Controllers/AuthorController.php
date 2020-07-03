@@ -38,6 +38,7 @@ class AuthorController extends Controller
         if ($user==null){
             DB::table('authors')->insert(
             ['id_users'=>$id]);
+            redirect('/post/add');
         }
 //      если есть - ошибка
         else echo 'Вы уже как автор';

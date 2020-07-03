@@ -305,6 +305,9 @@ header {
     border-color: #4a90e2;
     background: white;
 }
+.info__account{
+    margin-bottom: 50px;
+}
 .info hr {
     border: 0;
     width: 100%;
@@ -355,6 +358,31 @@ header {
     margin-bottom: 12px;
     font-size: 26px;
 }
+.post-title a{
+    color: black;
+}
+.main__post{
+    width: 70%;
+}
+
+
+.text p {
+    margin: 15px 0px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+}
+.text i{
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+}
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6{
+    font-family: 'Oswald', sans-serif;
+}
 /* блок с кнопкой "продолжить чтение" и кнопками социальных сетей */
 .post_list_info {
     height: 40px;
@@ -378,8 +406,6 @@ header {
 }
 
 .post-footer {
-    border-top: 1px solid #ebebe3;
-    border-bottom: 1px solid #ebebe3;
     position: relative;
     margin-top: 15px;
 }
@@ -421,7 +447,7 @@ header {
 .post-social a {
     display: inline-block;
     margin-left: 8px;
-    color: #f8b763;
+    color: #8b8a89;
     width: 25px;
     height: 25px;
     line-height: 23px;

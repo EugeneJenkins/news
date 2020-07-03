@@ -18,8 +18,11 @@ Route::get('/author','AuthorController@form');
 Route::get('/author/add','AuthorController@addAuthor');
 Route::get('/user/profile','SettingsController@profile')->name('profile');
 Route::get('/user/account','SettingsController@account');
-Route::post('/post/add','PostController@postAdd');
+Route::get('/post/add','PostController@postAdd')->name('postadd');
+Route::post('/post/add','PostController@postAdd')->name('postadd');
 Route::get('/news','IndexController@news');
 Route::get('/articles','IndexController@article');
+
+Route::get('/post/{table?}/{id?}','IndexController@mainPost');
 
 Auth::routes();

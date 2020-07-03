@@ -8,7 +8,8 @@
         rel="stylesheet"
         href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?31" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Philosopher:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?1393323" />
 </head>
 <body>
 <header>
@@ -17,8 +18,6 @@
         @auth
             <div class="become_an_Author"><a href="/author">Стать автором</a></div>
         @endauth
-
-
         <form action="" method="POST" class="searchform">
             <input type="text" placeholder="Искать на сайте..." />
             <button type="submit"><i class="fa fa-search"></i></button>
@@ -39,18 +38,18 @@
             <div class="subtitle__sign">
                 <div class="nav__sign">
                     @auth
-                        <a href="/user/profile">Home</a>
-                        <div class="test">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="sign__link" href="/user/profile">{{ Auth::user()->name }}</a>
+                        <a class="sign__link" href="/post/add">Публикация</a>
+                            <a  class="sign__link" class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a href="/post/add">пост</a>
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                        </div>
+
                     @else
                         <a class="sign__link" href="/login">Войти</a>
 
@@ -58,7 +57,6 @@
                              <a class="sign__link" href="/register">Зарегистрироваться</a>
                         @endif
                     @endauth
-
                 </div>
             </div>
         </div>

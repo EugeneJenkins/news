@@ -6,7 +6,7 @@
 @section('main')
     <div class="add__Post">
     <div class="container">
-        <form action="" method="Post">
+        <form  method="POST" action="{{route('postadd')}}">
             @csrf
             <div class="select__post">
                 <select name="post" >
@@ -27,12 +27,13 @@
                 <p>Текст:</p>
                 <div class="text_add">
                     <div class="add__tag">
-                        <ul>
+                        <ul style="cursor: pointer;">
                             <li><a onclick = "add('h2')">h2</a></li>
                             <li><b><a onclick = "add('b')">b</a></b></li>
                             <li><i><a onclick = "add('i')">I</a></i></li>
                             <li><u><a onclick = "add('u')">U</a></u></li>
                             <li><s><a onclick = "add('s')">S</a></s></li>
+                            <li><s><a onclick = "add('p')">P</a></s></li>
                         </ul>
                     </div>
                     <textarea class="tm-editor__textarea tm-editor__textarea_huge" id="editor" cols="30" rows="7" id="text_textarea" name="text"></textarea>
