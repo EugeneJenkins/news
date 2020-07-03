@@ -9,7 +9,7 @@
         href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Philosopher:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?1393323" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 </head>
 <body>
 <header>
